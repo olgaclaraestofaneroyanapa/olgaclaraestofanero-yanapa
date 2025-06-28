@@ -1,140 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta name="google-site-verification" content="BETnvPvCtsZ7BaXUEtZ9zun5iUadthKfMx-lMIr0ZVk" />
-    <meta charset="UTF-8">
-    <title>Mi Página - Clara Est.</title>
-    <style>
-        body {
-            background-color: #ffeef2;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #5c5c5c;
-            margin: 0;
-            padding: 0;
-        }
+<head>
+  <meta charset="UTF-8">
+  <title>Olga Clara Estofanero Yanapa | Página Personal</title>
+  <meta name="description" content="Conoce a Olga Clara Estofanero Yanapa, estudiante de Ingeniería Industrial en la Universidad Católica San Pablo. Descubre su historia, profesores, amigos y más.">
+  <meta name="keywords" content="Olga Clara Estofanero, Ingeniería Industrial, UCSP, Universidad Católica San Pablo, estudiante, página personal, Arequipa, Ingeniería, Perú">
+  <meta name="author" content="Olga Clara Estofanero Yanapa">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
-        header {
-            background-color: #f9c5d1;
-            padding: 30px;
-            text-align: center;
-            color: #fff;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-        }
-
-        .container {
-            padding: 30px;
-            max-width: 800px;
-            margin: auto;
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        button {
-            background-color: #fddde6;
-            border: none;
-            padding: 12px 20px;
-            margin: 10px;
-            border-radius: 10px;
-            color: #333;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #f9c5d1;
-        }
-
-        .section {
-            display: none;
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        img {
-            width: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 20px auto;
-            border: 4px solid #fddde6;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f9c5d1;
-            color: #fff;
-            margin-top: 30px;
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fcefee;
+      margin: 0;
+      padding: 0;
+      color: #5f5f5f;
+    }
+    header {
+      background-color: #fde2e4;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #fbc4ab;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #ff6f91;
+    }
+    .bienvenida {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    .foto {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .foto img {
+      width: 200px;
+      height: auto;
+      border-radius: 15px;
+      border: 4px solid #ffc8dd;
+    }
+    .botones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .boton {
+      background-color: #cdb4db;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1em;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .boton:hover {
+      background-color: #b39ddb;
+    }
+    .contenido {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #ffffffb0;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #e4c1f9;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Clara Est.</h1>
-        <p>Mi página personal</p>
-    </header>
+  <header>
+    <h1>Olga Clara Estofanero Yanapa</h1>
+  </header>
 
-    <div class="container">
-        <img src="https://via.placeholder.com/150" alt="Foto de Clara">
+  <div class="bienvenida">Bienvenidos a mi página web</div>
 
-        <button onclick="mostrar('estudios')">📚 Dónde estudio</button>
-        <button onclick="mostrar('carrera')">🎓 Carrera</button>
-        <button onclick="mostrar('profesores')">👩‍🏫 Profesores</button>
-        <button onclick="mostrar('companeros')">👭 Compañeros</button>
+  <div class="foto">
+    <img src="LINK_DE_TU_FOTO" alt="Foto de Olga Clara Estofanero Yanapa">
+  </div>
 
-        <div id="estudios" class="section">
-            <h2>📚 Dónde estudio</h2>
-            <p>Estudio en la <strong>Institución Educativa Nuestra Señora del Rosario</strong>.</p>
-        </div>
+  <nav class="botones">
+    <a class="boton" href="https://ucsp.edu.pe/" target="_blank">Universidad Católica San Pablo</a>
+    <a class="boton" href="https://ucsp.edu.pe/carreras/ingenieria-industrial/" target="_blank">Ingeniería Industrial</a>
+    <a class="boton" href="#profes">Mis Profesores</a>
+    <a class="boton" href="#amigos">Mis Amigos</a>
+    <a class="boton" href="#masinfo">Más Información de Mí</a>
+  </nav>
 
-        <div id="carrera" class="section">
-            <h2>🎓 Carrera</h2>
-            <p>Estoy en la especialidad de <strong>Ciencias</strong>, enfocada en física, química y tecnología.</p>
-        </div>
+  <section class="contenido" id="profes">
+    <h2>Mis Profesores</h2>
+    <ul>
+      <li>Prof. Juan Pérez – Física</li>
+      <li>Prof. María López – Química</li>
+      <li>Prof. Ana Ramírez – Estadística</li>
+      <li>Prof. Carlos Gómez – Termodinámica</li>
+    </ul>
+  </section>
 
-        <div id="profesores" class="section">
-            <h2>👩‍🏫 Profesores</h2>
-            <ul>
-                <li>Prof. Alicia Romero – Física</li>
-                <li>Prof. Marco Sánchez – Química</li>
-                <li>Prof. Lourdes Pérez – Matemática</li>
-                <li>Prof. Luis Herrera – Computación</li>
-            </ul>
-        </div>
+  <section class="contenido" id="amigos">
+    <h2>Mis Amigos de la U</h2>
+    <ul>
+      <li>Valeria</li>
+      <li>Mateo</li>
+      <li>Lucía</li>
+      <li>Diego</li>
+    </ul>
+  </section>
 
-        <div id="companeros" class="section">
-            <h2>👭 Compañeros</h2>
-            <ul>
-                <li>Andrea G.</li>
-                <li>Valeria R.</li>
-                <li>Lucía M.</li>
-                <li>Álvaro T.</li>
-                <li>Kevin Z.</li>
-            </ul>
-        </div>
-    </div>
-
-    <footer>
-        Creado con 💖 por Clara Est. – 2025
-    </footer>
-
-    <script>
-        function mostrar(id) {
-            // Oculta todas las secciones primero
-            const secciones = document.getElementsByClassName('section');
-            for (let i = 0; i < secciones.length; i++) {
-                secciones[i].style.display = 'none';
-            }
-            // Muestra solo la sección seleccionada
-            document.getElementById(id).style.display = 'block';
-        }
-    </script>
+  <section class="contenido" id="masinfo">
+    <h2>Más sobre mí</h2>
+    <p>Soy Olga Clara Estofanero Yanapa, estudiante apasionada de Ingeniería Industrial en la Universidad Católica San Pablo. Me encanta aprender, ayudar a los demás, la música y disfrutar del día a día con optimismo y perseverancia. ✨</p>
+  </section>
 
 </body>
 </html>
