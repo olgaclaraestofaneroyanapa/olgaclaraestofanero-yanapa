@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Olga Clara Estofanero Yanapa | Página Personal</title>
-  <meta name="description" content="Conoce a Olga Clara Estofanero Yanapa, estudiante de Ingeniería Industrial en la Universidad Católica San Pablo. Descubre su historia, profesores, amigos y más.">
-  <meta name="keywords" content="Olga Clara Estofanero, Ingeniería Industrial, UCSP, Universidad Católica San Pablo, estudiante, página personal, Arequipa, Ingeniería, Perú">
-  <meta name="author" content="Olga Clara Estofanero Yanapa">
+  <meta name="description" content="Conoce a Olga Clara Estofanero Yanapa, estudiante de Ingeniería Industrial en la Universidad Católica San Pablo. Descubre su formación académica, amigos y más.">
+  <meta name="keywords" content="Olga Clara Estofanero, Ingeniería Industrial, UCSP, estudiante, página personal, Arequipa, Perú">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
@@ -17,33 +16,38 @@
       padding: 0;
       color: #5f5f5f;
     }
+
     header {
       background-color: #fde2e4;
       padding: 20px;
       text-align: center;
       border-bottom: 3px solid #fbc4ab;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5em;
       color: #ff6f91;
     }
+
     .bienvenida {
       text-align: center;
       font-size: 1.5em;
       margin-top: 10px;
     }
+
     .foto {
       display: flex;
       justify-content: center;
       margin: 20px 0;
     }
+
     .foto img {
       width: 200px;
-      height: auto;
       border-radius: 15px;
       border: 4px solid #ffc8dd;
     }
+
     .botones {
       display: flex;
       flex-wrap: wrap;
@@ -51,6 +55,7 @@
       gap: 15px;
       margin-bottom: 30px;
     }
+
     .boton {
       background-color: #cdb4db;
       color: white;
@@ -59,18 +64,41 @@
       border-radius: 12px;
       font-size: 1em;
       text-decoration: none;
+      cursor: pointer;
       transition: 0.3s;
     }
+
     .boton:hover {
       background-color: #b39ddb;
     }
+
     .contenido {
       max-width: 800px;
-      margin: auto;
+      margin: 10px auto;
       padding: 20px;
       background-color: #ffffffb0;
       border-radius: 15px;
       box-shadow: 0 0 10px #e4c1f9;
+      display: none;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .contenido.show {
+      display: block;
+      opacity: 1;
+      animation: slideDown 0.5s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -83,29 +111,23 @@
   <div class="bienvenida">Bienvenidos a mi página web</div>
 
   <div class="foto">
-    <img src="LINK_DE_TU_FOTO" alt="Foto de Olga Clara Estofanero Yanapa">
+    <img src="https://scontent.flim4-3.fna.fbcdn.net/v/t39.30808-6/480828538_1614954349905401_4316813934776975887_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeF7G3fy-qHu7rU8rGBYYTqPtFzVtzO-Qsu0XNW3M75Cy1hY65Y-pwThmjX17JrJYvkEnry5BmQk4OM3od51_Ign&_nc_ohc=IPQy8osiwbEQ7kNvwHNH-30&_nc_oc=Adkvrr4nEEmVpTHHw_qEkrDf4IGZUVspOF8uPc2gqOr2dFcC1-WhkVB7_ydhcS32-Kk&_nc_zt=23&_nc_ht=scontent.flim4-3.fna&_nc_gid=3qbkzO6MBrxsvWuqxTGlUQ&oh=00_AfNl49sf2UoumCIS12eQRwVJR-jzOB0ER-k2KeOTKavysw&oe=6865F6FA" alt="Foto de Olga Clara Estofanero Yanapa">
   </div>
 
-  <nav class="botones">
-    <a class="boton" href="https://ucsp.edu.pe/" target="_blank">Universidad Católica San Pablo</a>
-    <a class="boton" href="https://ucsp.edu.pe/carreras/ingenieria-industrial/" target="_blank">Ingeniería Industrial</a>
-    <a class="boton" href="#profes">Mis Profesores</a>
-    <a class="boton" href="#amigos">Mis Amigos</a>
-    <a class="boton" href="#masinfo">Más Información de Mí</a>
-  </nav>
+  <div class="botones">
+    <button class="boton" onclick="mostrar('formacion')">Formación Académica</button>
+    <button class="boton" onclick="mostrar('amigos')">Amigos</button>
+    <button class="boton" onclick="mostrar('masinfo')">Más información sobre mí</button>
+  </div>
 
-  <section class="contenido" id="profes">
-    <h2>Mis Profesores</h2>
-    <ul>
-      <li>Prof. Juan Pérez – Física</li>
-      <li>Prof. María López – Química</li>
-      <li>Prof. Ana Ramírez – Estadística</li>
-      <li>Prof. Carlos Gómez – Termodinámica</li>
-    </ul>
+  <section id="formacion" class="contenido">
+    <h2>Formación Académica</h2>
+    <p>Estudio en la <a href="https://ucsp.edu.pe/" target="_blank">Universidad Católica San Pablo</a>.</p>
+    <p>Mi carrera es <a href="https://ucsp.edu.pe/carreras/ingenieria-industrial/" target="_blank">Ingeniería Industrial</a>.</p>
   </section>
 
-  <section class="contenido" id="amigos">
-    <h2>Mis Amigos de la U</h2>
+  <section id="amigos" class="contenido">
+    <h2>Mis Amigos</h2>
     <ul>
       <li>Valeria</li>
       <li>Mateo</li>
@@ -114,10 +136,17 @@
     </ul>
   </section>
 
-  <section class="contenido" id="masinfo">
+  <section id="masinfo" class="contenido">
     <h2>Más sobre mí</h2>
-    <p>Soy Olga Clara Estofanero Yanapa, estudiante apasionada de Ingeniería Industrial en la Universidad Católica San Pablo. Me encanta aprender, ayudar a los demás, la música y disfrutar del día a día con optimismo y perseverancia. ✨</p>
+    <p>Soy una persona curiosa, dedicada y con muchas ganas de aprender. Me gusta la música, salir con mis amigos, y también trabajar en equipo para alcanzar grandes metas ✨.</p>
   </section>
+
+  <script>
+    function mostrar(id) {
+      document.querySelectorAll('.contenido').forEach(el => el.classList.remove('show'));
+      document.getElementById(id).classList.add('show');
+    }
+  </script>
 
 </body>
 </html>
